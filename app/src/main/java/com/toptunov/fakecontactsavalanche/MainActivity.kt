@@ -42,14 +42,14 @@ class MainActivity : AppCompatActivity() {
 
             val numberOfContactsString = evQuantity.text.toString()
             val numberOfContacts : Int
-                if (numberOfContactsString != ""){
-                 numberOfContacts = numberOfContactsString.toInt()
-                    Log.d("[AppDebugLog]", numberOfContacts.toString())
-                    generateButton.isEnabled = false
-                    createContacts(numberOfContacts)
-                }else{
-                    Toast.makeText(this, "Nothing to create.", Toast.LENGTH_LONG).show()
-                }
+            if (numberOfContactsString != ""){
+                numberOfContacts = numberOfContactsString.toInt()
+                Log.d("[AppDebugLog]", numberOfContacts.toString())
+                generateButton.isEnabled = false
+                createContacts(numberOfContacts)
+            }else{
+                Toast.makeText(this, "Nothing to create.", Toast.LENGTH_LONG).show()
+            }
         }
     }
 
