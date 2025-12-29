@@ -7,6 +7,9 @@ misc.xml
 compiler.xml
 *.jar
 /codeStyles/
-/gradle/wrapper/*
+/gradle/wrapper/gradle-wrapper.jar
+/grdle/wrapper/gradle-wrapper.properties
+gradle.xml
+
 
 
