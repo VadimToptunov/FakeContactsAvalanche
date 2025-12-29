@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Fake Contacts Avalanche</string>
+    <string name="app_title">تولید کننده مخاطبین</string>
+    <string name="contacts_quantity">تعداد مخاطبین</string>
+    <string name="helper_text">عددی بین 1 تا 10000 وارد کنید</string>
+    <string name="generate_btn_text">ایجاد</string>
+    <string name="cancel_btn_text">لغو</string>
+    <string name="permission_required">برای دسترسی به مخاطبین نیاز به مجوز است</string>
+    <string name="permission_denied">مجوز رد شد. برنامه بدون دسترسی به مخاطبین نمی‌تواند کار کند.</string>
+    <string name="permission_rationale">برنامه برای ایجاد داده‌های آزمایشی نیاز به دسترسی به مخاطبین دارد.</string>
+    <string name="error_empty_input">تعداد مخاطبین را وارد کنید</string>
+    <string name="error_invalid_number">عدد نامعتبر</string>
+    <string name="error_max_exceeded">حداکثر %d مخاطب در هر بار</string>
+    <string name="error_must_be_positive">تعداد باید بیشتر از 0 باشد</string>
+    <string name="dialog_ok">تایید</string>
+    <string name="dialog_cancel">لغو</string>
+    <string name="dialog_try_again">دوباره تلاش کنید</string>
+    <string name="progress_creating">در حال ایجاد مخاطبین: %1$d / %2$d</string>
+    <string name="success_created">%d مخاطب ایجاد شد</string>
+    <string name="warning_partial">%1$d از %2$d مخاطب ایجاد شد</string>
+    
+    <plurals name="contacts_created">
+        <item quantity="one">%d مخاطب ایجاد شد</item>
+        <item quantity="other">%d مخاطب ایجاد شد</item>
+    </plurals>
+</resources>

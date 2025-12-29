@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Fake Contacts Avalanche</string>
+    <string name="app_title">مولد جهات الاتصال</string>
+    <string name="contacts_quantity">عدد جهات الاتصال</string>
+    <string name="helper_text">أدخل من 1 إلى 10000</string>
+    <string name="generate_btn_text">إنشاء</string>
+    <string name="cancel_btn_text">إلغاء</string>
+    <string name="permission_required">الإذن مطلوب للوصول إلى جهات الاتصال</string>
+    <string name="permission_denied">تم رفض الإذن. لا يمكن للتطبيق العمل بدون الوصول إلى جهات الاتصال.</string>
+    <string name="permission_rationale">يحتاج التطبيق إلى الوصول إلى جهات الاتصال لإنشاء بيانات تجريبية.</string>
+    <string name="error_empty_input">أدخل عدد جهات الاتصال</string>
+    <string name="error_invalid_number">رقم غير صالح</string>
+    <string name="error_max_exceeded">الحد الأقصى %d جهة اتصال في المرة الواحدة</string>
+    <string name="error_must_be_positive">يجب أن يكون العدد أكبر من 0</string>
+    <string name="dialog_ok">موافق</string>
+    <string name="dialog_cancel">إلغاء</string>
+    <string name="dialog_try_again">حاول مرة أخرى</string>
+    <string name="progress_creating">إنشاء جهات الاتصال: %1$d / %2$d</string>
+    <string name="success_created">تم إنشاء %d جهة اتصال</string>
+    <string name="warning_partial">تم إنشاء %1$d من %2$d جهة اتصال</string>
+    
+    <plurals name="contacts_created">
+        <item quantity="zero">لم يتم إنشاء أي جهة اتصال</item>
+        <item quantity="one">تم إنشاء جهة اتصال واحدة</item>
+        <item quantity="two">تم إنشاء جهتي اتصال</item>
+        <item quantity="few">تم إنشاء %d جهات اتصال</item>
+        <item quantity="many">تم إنشاء %d جهة اتصال</item>
+        <item quantity="other">تم إنشاء %d جهة اتصال</item>
+    </plurals>
+</resources>

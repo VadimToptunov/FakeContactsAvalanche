@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Fake Contacts Avalanche</string>
+    <string name="app_title">Генератор Контактів</string>
+    <string name="contacts_quantity">Кількість контактів</string>
+    <string name="helper_text">Введіть від 1 до 10000</string>
+    <string name="generate_btn_text">Створити</string>
+    <string name="cancel_btn_text">Скасувати</string>
+    <string name="permission_required">Необхідний дозвіл для роботи з контактами</string>
+    <string name="permission_denied">Дозвіл відхилено. Програма не може працювати без доступу до контактів.</string>
+    <string name="permission_rationale">Програмі потрібен доступ до контактів для створення тестових даних.</string>
+    <string name="error_empty_input">Введіть кількість контактів</string>
+    <string name="error_invalid_number">Невірне число</string>
+    <string name="error_max_exceeded">Максимум %d контактів за раз</string>
+    <string name="error_must_be_positive">Кількість має бути більше 0</string>
+    <string name="dialog_ok">OK</string>
+    <string name="dialog_cancel">Скасувати</string>
+    <string name="dialog_try_again">Спробувати знову</string>
+    <string name="progress_creating">Створення контактів: %1$d / %2$d</string>
+    <string name="success_created">Створено %d контактів</string>
+    <string name="warning_partial">Створено %1$d з %2$d контактів</string>
+    
+    <plurals name="contacts_created">
+        <item quantity="one">Створено %d контакт</item>
+        <item quantity="few">Створено %d контакти</item>
+        <item quantity="many">Створено %d контактів</item>
+        <item quantity="other">Створено %d контактів</item>
+    </plurals>
+</resources>

@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Fake Contacts Avalanche</string>
+    <string name="app_title">Generador de Contactos</string>
+    <string name="contacts_quantity">Cantidad de contactos</string>
+    <string name="helper_text">Ingrese de 1 a 10000</string>
+    <string name="generate_btn_text">Generar</string>
+    <string name="cancel_btn_text">Cancelar</string>
+    <string name="permission_required">Se requiere permiso para acceder a los contactos</string>
+    <string name="permission_denied">Permiso denegado. La aplicación no puede funcionar sin acceso a los contactos.</string>
+    <string name="permission_rationale">La aplicación necesita acceso a los contactos para crear datos de prueba.</string>
+    <string name="error_empty_input">Ingrese la cantidad de contactos</string>
+    <string name="error_invalid_number">Número inválido</string>
+    <string name="error_max_exceeded">Máximo %d contactos a la vez</string>
+    <string name="error_must_be_positive">La cantidad debe ser mayor que 0</string>
+    <string name="dialog_ok">OK</string>
+    <string name="dialog_cancel">Cancelar</string>
+    <string name="dialog_try_again">Intentar de nuevo</string>
+    <string name="progress_creating">Creando contactos: %1$d / %2$d</string>
+    <string name="success_created">Creados %d contactos</string>
+    <string name="warning_partial">Creados %1$d de %2$d contactos</string>
+    
+    <plurals name="contacts_created">
+        <item quantity="one">Creado %d contacto</item>
+        <item quantity="other">Creados %d contactos</item>
+    </plurals>
+</resources>
