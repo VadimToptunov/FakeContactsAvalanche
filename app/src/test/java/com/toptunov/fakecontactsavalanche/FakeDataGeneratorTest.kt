@@ -32,8 +32,50 @@ class FakeDataGeneratorTest {
         repeat(100) {
             val phone = FakeDataGenerator.generatePhoneNumber()
             val areaCode = phone.substringAfter("+1-").substringBefore("-").toInt()
-            assertTrue(areaCode in 200..999)
+            assertTrue("Area code $areaCode should be in range 200-999", areaCode in 200..999)
         }
+    }
+
+    @Test
+    fun `generatePhoneNumber generates valid prefixes`() {
+        repeat(100) {
+            val phone = FakeDataGenerator.generatePhoneNumber()
+            val parts = phone.removePrefix("+1-").split("-")
+            val prefix = parts[1].toInt()
+            assertTrue("Prefix $prefix should be in range 200-999", prefix in 200..999)
+        }
+    }
+
+    @Test
+    fun `generatePhoneNumber generates valid line numbers`() {
+        repeat(100) {
+            val phone = FakeDataGenerator.generatePhoneNumber()
+            val lineNumber = phone.substringAfterLast("-").toInt()
+            assertTrue("Line number $lineNumber should be in range 1000-9999", lineNumber in 1000..9999)
+        }
+    }
+
+    @Test
+    fun `generatePhoneNumber can generate values across full range`() {
+        val generatedAreaCodes = mutableSetOf<Int>()
+        val generatedLineNumbers = mutableSetOf<Int>()
+        
+        repeat(3000) {
+            val phone = FakeDataGenerator.generatePhoneNumber()
+            val areaCode = phone.substringAfter("+1-").substringBefore("-").toInt()
+            val lineNumber = phone.substringAfterLast("-").toInt()
+            generatedAreaCodes.add(areaCode)
+            generatedLineNumbers.add(lineNumber)
+        }
+        
+        assertTrue("Area codes should include values near 999 (got max: ${generatedAreaCodes.maxOrNull()})", 
+            generatedAreaCodes.any { it >= 990 })
+        assertTrue("Line numbers should include values near 9999 (got max: ${generatedLineNumbers.maxOrNull()})", 
+            generatedLineNumbers.any { it >= 9990 })
+        assertTrue("Area codes should be diverse (got ${generatedAreaCodes.size} unique values)", 
+            generatedAreaCodes.size > 500)
+        assertTrue("Line numbers should be diverse (got ${generatedLineNumbers.size} unique values)", 
+            generatedLineNumbers.size > 2500)
     }
 
     @Test

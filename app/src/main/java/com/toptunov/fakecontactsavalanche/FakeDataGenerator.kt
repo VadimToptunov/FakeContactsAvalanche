@@ -50,9 +50,9 @@ object FakeDataGenerator {
     }
     
     fun generatePhoneNumber(): String {
-        val areaCode = Random.nextInt(200, 999)
-        val prefix = Random.nextInt(200, 999)
-        val lineNumber = Random.nextInt(1000, 9999)
+        val areaCode = Random.nextInt(200, 1000)
+        val prefix = Random.nextInt(200, 1000)
+        val lineNumber = Random.nextInt(1000, 10000)
         return "+1-$areaCode-$prefix-$lineNumber"
     }
     
