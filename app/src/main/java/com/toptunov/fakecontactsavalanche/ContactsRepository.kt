@@ -4,22 +4,21 @@ import android.content.ContentProviderOperation
 import android.content.Context
 import android.provider.ContactsContract
 import android.util.Log
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
-import net.datafaker.Faker
 
 /**
  * Repository for creating fake contacts using suspend functions for async work
  */
 class ContactsRepository(private val context: Context) {
 
-    private val faker = Faker()
     suspend fun createSingleContact(): Boolean = withContext(Dispatchers.IO) {
         try {
-            val contactName = faker.name().fullName()
-            val contactPhoneNumber = faker.phoneNumber().cellPhone()
-            val contactCompany = faker.company().name()
-            val contactJobTitle = faker.job().position()
+            val contactName = FakeDataGenerator.generateFullName()
+            val contactPhoneNumber = FakeDataGenerator.generatePhoneNumber()
+            val contactCompany = FakeDataGenerator.generateCompany()
+            val contactJobTitle = FakeDataGenerator.generateJobTitle()
 
             Log.d(TAG, "Creating contact: $contactName, $contactPhoneNumber")
 
@@ -32,6 +31,8 @@ class ContactsRepository(private val context: Context) {
 
             context.contentResolver.applyBatch(ContactsContract.AUTHORITY, operations)
             true
+        } catch (e: CancellationException) {
+            throw e
         } catch (e: Exception) {
             Log.e(TAG, "Error creating contact", e)
             false
@@ -47,7 +48,9 @@ class ContactsRepository(private val context: Context) {
             if (createSingleContact()) {
                 successCount++
             }
-            onProgress(index + 1, count)
+            withContext(Dispatchers.Main) {
+                onProgress(index + 1, count)
+            }
         }
         
         successCount

@@ -3,6 +3,7 @@ package com.toptunov.fakecontactsavalanche
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -62,6 +63,8 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
                         totalCount = count
                     )
                 }
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
                 _uiState.value = UiState.Error("${context.getString(R.string.error_invalid_number)}: ${e.message}")
             }

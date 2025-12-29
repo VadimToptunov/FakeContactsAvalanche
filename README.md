@@ -80,18 +80,18 @@ The app properly requests runtime permissions with clear explanations.
 - **AndroidX Libraries** - Modern Android components
 - **Lifecycle & ViewModel** - Lifecycle-aware components
 - **Kotlin Coroutines** - Structured concurrency
-- **DataFaker** - Realistic fake data generation
+- **Custom Fake Data Generator** - Android-compatible random data generation
 - **Material Components** - Material Design 3 UI
 
 ## Generated Contact Data
 
 Each contact includes:
-- **Full Name** - Random realistic names
-- **Phone Number** - Random cell phone numbers
-- **Company** - Random company names
-- **Job Title** - Random job positions
+- **Full Name** - Random realistic names from a curated list
+- **Phone Number** - Random US phone numbers (+1-XXX-XXX-XXXX format)
+- **Company** - Random company names from tech and business sectors
+- **Job Title** - Random job positions across various industries
 
-All data is generated using the DataFaker library for authenticity.
+All data is generated using a custom `FakeDataGenerator` that's fully compatible with Android runtime.
 
 ## Build & Installation
 
@@ -137,10 +137,10 @@ The APK will be located in `app/build/outputs/apk/debug/app-debug.apk`
 
 ## Performance
 
-- **Efficient** - One Faker instance reused for all contacts
+- **Efficient** - Lightweight random data generation without external libraries
 - **Async** - Non-blocking UI with Coroutines
-- **Fast** - Creates ~100 contacts per second (device dependent)
-- **Memory Safe** - Proper resource management
+- **Fast** - Creates ~100-200 contacts per second (device dependent)
+- **Memory Safe** - Proper resource management with no heavy dependencies
 
 ## Testing
 
@@ -180,6 +180,7 @@ app/
 │   │   ├── MainActivity.kt          # Main UI controller
 │   │   ├── MainViewModel.kt         # State management
 │   │   ├── ContactsRepository.kt    # Data access layer
+│   │   ├── FakeDataGenerator.kt     # Random data generation
 │   │   └── UiState.kt               # UI state definitions
 │   ├── res/
 │   │   ├── layout/
@@ -198,24 +199,23 @@ app/
 ## Dependencies
 
 ### Core
-- `androidx.core:core-ktx:1.17.0`
-- `androidx.appcompat:appcompat:1.7.1`
-- `com.google.android.material:material:1.13.0`
+- `androidx.core:core-ktx:1.13.1`
+- `androidx.appcompat:appcompat:1.7.0`
+- `com.google.android.material:material:1.12.0`
 
 ### Architecture
-- `androidx.lifecycle:lifecycle-viewmodel-ktx:2.10.0`
-- `androidx.lifecycle:lifecycle-runtime-ktx:2.10.0`
-- `androidx.activity:activity-ktx:1.12.2`
+- `androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.6`
+- `androidx.lifecycle:lifecycle-runtime-ktx:2.8.6`
+- `androidx.activity:activity-ktx:1.9.2`
 
 ### Async
 - `org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.1`
 - `org.jetbrains.kotlinx:kotlinx-coroutines-core:1.8.1`
 
-### Data Generation
-- `net.datafaker:datafaker:2.5.3`
-
 ### Java 17 Support
 - `com.android.tools:desugar_jdk_libs:2.1.5`
+
+All dependencies are compatible with Android 14 (API 34) and Android Gradle Plugin 8.3.0.
 
 ## Known Limitations
 
