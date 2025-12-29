@@ -92,7 +92,7 @@ sealed class UiState {
         val total: Int
     ) : UiState() {
         val progress: Int
-            get() = if (total > 0) (current * 100 / total) else 0
+            get() = if (total > 0) (current * 100L / total).toInt() else 0
     }
     
     data class Success(
