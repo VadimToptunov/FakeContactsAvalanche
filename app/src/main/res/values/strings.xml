@@ -12,6 +12,7 @@
     <string name="error_invalid_number">Invalid number</string>
     <string name="error_max_exceeded">Maximum %d contacts at a time</string>
     <string name="error_must_be_positive">Number must be greater than 0</string>
+    <string name="error_creating_contacts">Failed to create contacts</string>
     <string name="dialog_ok">OK</string>
     <string name="dialog_cancel">Cancel</string>
     <string name="dialog_try_again">Try again</string>

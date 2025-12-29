@@ -66,7 +66,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
             } catch (e: CancellationException) {
                 throw e
             } catch (e: Exception) {
-                _uiState.value = UiState.Error("${context.getString(R.string.error_invalid_number)}: ${e.message}")
+                _uiState.value = UiState.Error("${context.getString(R.string.error_creating_contacts)}: ${e.message}")
             }
         }
     }

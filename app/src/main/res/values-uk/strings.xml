@@ -12,6 +12,7 @@
     <string name="error_invalid_number">Невірне число</string>
     <string name="error_max_exceeded">Максимум %d контактів за раз</string>
     <string name="error_must_be_positive">Кількість має бути більше 0</string>
+    <string name="error_creating_contacts">Не вдалося створити контакти</string>
     <string name="dialog_ok">OK</string>
     <string name="dialog_cancel">Скасувати</string>
     <string name="dialog_try_again">Спробувати знову</string>

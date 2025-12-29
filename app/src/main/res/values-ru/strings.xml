@@ -12,6 +12,7 @@
     <string name="error_invalid_number">Неверное число</string>
     <string name="error_max_exceeded">Максимум %d контактов за раз</string>
     <string name="error_must_be_positive">Количество должно быть больше 0</string>
+    <string name="error_creating_contacts">Не удалось создать контакты</string>
     <string name="dialog_ok">OK</string>
     <string name="dialog_cancel">Отмена</string>
     <string name="dialog_try_again">Попробовать снова</string>

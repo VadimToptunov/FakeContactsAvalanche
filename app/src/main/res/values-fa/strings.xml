@@ -12,6 +12,7 @@
     <string name="error_invalid_number">عدد نامعتبر</string>
     <string name="error_max_exceeded">حداکثر %d مخاطب در هر بار</string>
     <string name="error_must_be_positive">تعداد باید بیشتر از 0 باشد</string>
+    <string name="error_creating_contacts">ایجاد مخاطبین ناموفق بود</string>
     <string name="dialog_ok">تایید</string>
     <string name="dialog_cancel">لغو</string>
     <string name="dialog_try_again">دوباره تلاش کنید</string>
